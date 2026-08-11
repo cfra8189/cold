@@ -1,0 +1,81 @@
+[
+  {
+    "ticker": "BRK.B",
+    "metricKey": "operatingEarnings",
+    "value": 12983,
+    "unavailableReason": null,
+    "currency": "USD",
+    "unit": "USD_millions",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Berkshire Hathaway Inc. — Second Quarter 2026 News Release",
+      "sourceType": "company-supplemental",
+      "documentType": "press-release",
+      "documentUrl": "https://www.berkshirehathaway.com/news/aug0826.pdf",
+      "companyDefinitionNote": "Berkshire's own non-GAAP measure: net earnings excluding investment gains/losses and certain impairments of goodwill, intangible assets and equity-method investments."
+    }
+  },
+  {
+    "ticker": "BRK.B",
+    "metricKey": "netEarningsPerClassBShare",
+    "value": 11.91,
+    "unavailableReason": null,
+    "currency": "USD",
+    "unit": "USD_per_share",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Berkshire Hathaway Inc. — Second Quarter 2026 News Release",
+      "sourceType": "company-supplemental",
+      "documentType": "press-release",
+      "documentUrl": "https://www.berkshirehathaway.com/news/aug0826.pdf",
+      "companyDefinitionNote": "GAAP net earnings attributable to Berkshire shareholders, per average equivalent Class B share (1/1,500th of the Class A figure)."
+    }
+  },
+  {
+    "ticker": "BRK.B",
+    "metricKey": "netEarningsPerClassBShare",
+    "value": 5.73,
+    "unavailableReason": null,
+    "currency": "USD",
+    "unit": "USD_per_share",
+    "classification": "reported",
+    "period": { "fiscalYear": 2025, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2025-04-01", "periodEnd": "2025-06-30" },
+    "asOf": "2025-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Berkshire Hathaway Inc. — Second Quarter 2026 News Release (prior-year comparative)",
+      "sourceType": "company-supplemental",
+      "documentType": "press-release",
+      "documentUrl": "https://www.berkshirehathaway.com/news/aug0826.pdf"
+    }
+  },
+  {
+    "ticker": "BRK.B",
+    "metricKey": "insuranceFloat",
+    "value": 177.5,
+    "unavailableReason": null,
+    "currency": "USD",
+    "unit": "USD_billions",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Berkshire Hathaway Inc. — Second Quarter 2026 News Release",
+      "sourceType": "company-supplemental",
+      "documentType": "press-release",
+      "documentUrl": "https://www.berkshirehathaway.com/news/aug0826.pdf",
+      "companyDefinitionNote": "Company's own measure, stated as approximate: net liabilities assumed under insurance and reinsurance contracts, before the cost of holding them."
+    }
+  }
+]

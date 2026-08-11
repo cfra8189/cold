@@ -1,0 +1,128 @@
+[
+  {
+    "ticker": "O",
+    "metricKey": "reportedAffoPerShare",
+    "value": 1.09,
+    "unavailableReason": null,
+    "currency": "USD",
+    "unit": "USD_per_share",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Realty Income Corporation — Q2 2026 Earnings Release & Supplemental Information",
+      "sourceType": "company-supplemental",
+      "documentType": "supplemental",
+      "documentUrl": "https://www.realtyincome.com/sites/realty-income/files/2026-08/realty-income-earnings-release-and-supplemental-information-q2-2026.pdf",
+      "filingReferenceUrl": "https://www.sec.gov/Archives/edgar/data/0000726728/000072672826000044/o-991q22026.htm",
+      "companyDefinitionNote": "Realty Income's own AFFO measure (non-GAAP): starts from net income available to common stockholders, adds back real estate depreciation/amortization and impairments, removes gains on property sales, and adjusts for other items the company treats as non-comparable to ongoing operations. Confirmed directly in the release's diluted-AFFO reconciliation table for the three months ended June 30, 2026."
+    }
+  },
+  {
+    "ticker": "O",
+    "metricKey": "reportedDividendPerShare",
+    "value": 0.8115,
+    "unavailableReason": null,
+    "currency": "USD",
+    "unit": "USD_per_share",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Realty Income Corporation — Q2 2026 Earnings Release & Supplemental Information",
+      "sourceType": "company-supplemental",
+      "documentType": "supplemental",
+      "documentUrl": "https://www.realtyincome.com/sites/realty-income/files/2026-08/realty-income-earnings-release-and-supplemental-information-q2-2026.pdf",
+      "filingReferenceUrl": "https://www.sec.gov/Archives/edgar/data/0000726728/000072672826000044/o-991q22026.htm",
+      "companyDefinitionNote": "Confirmed directly in the release's financial data table (cash dividends paid per common share) for the three months ended June 30, 2026. The release's narrative text separately rounds this same figure to $0.812."
+    }
+  },
+  {
+    "ticker": "O",
+    "metricKey": "reportedAffoPayoutRatio",
+    "value": 74.5,
+    "unavailableReason": null,
+    "currency": "",
+    "unit": "percent",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Realty Income Corporation — Q2 2026 Earnings Release & Supplemental Information",
+      "sourceType": "company-supplemental",
+      "documentType": "supplemental",
+      "documentUrl": "https://www.realtyincome.com/sites/realty-income/files/2026-08/realty-income-earnings-release-and-supplemental-information-q2-2026.pdf",
+      "filingReferenceUrl": "https://www.sec.gov/Archives/edgar/data/0000726728/000072672826000044/o-991q22026.htm",
+      "companyDefinitionNote": "The company's own stated payout ratio, given directly in the release: monthly dividends represented 74.5% of diluted AFFO per share of $1.09 for the quarter. This is Realty Income's own figure, computed from unrounded internal dollars — it is not a COLD calculation."
+    }
+  },
+  {
+    "ticker": "O",
+    "metricKey": "occupancy",
+    "value": 98.8,
+    "unavailableReason": null,
+    "currency": "",
+    "unit": "percent",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Realty Income Corporation — Q2 2026 Earnings Release & Supplemental Information",
+      "sourceType": "company-supplemental",
+      "documentType": "supplemental",
+      "documentUrl": "https://www.realtyincome.com/sites/realty-income/files/2026-08/realty-income-earnings-release-and-supplemental-information-q2-2026.pdf",
+      "filingReferenceUrl": "https://www.sec.gov/Archives/edgar/data/0000726728/000072672826000044/o-991q22026.htm",
+      "companyDefinitionNote": "Confirmed directly in the release: portfolio occupancy as of June 30, 2026, stated in the same sentence as the March 31, 2026 and June 30, 2025 comparatives."
+    }
+  },
+  {
+    "ticker": "O",
+    "metricKey": "occupancy",
+    "value": 98.6,
+    "unavailableReason": null,
+    "currency": "",
+    "unit": "percent",
+    "classification": "reported",
+    "period": { "fiscalYear": 2025, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2025-04-01", "periodEnd": "2025-06-30" },
+    "asOf": "2025-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Realty Income Corporation — Q2 2026 Earnings Release & Supplemental Information (prior-year comparative)",
+      "sourceType": "company-supplemental",
+      "documentType": "supplemental",
+      "documentUrl": "https://www.realtyincome.com/sites/realty-income/files/2026-08/realty-income-earnings-release-and-supplemental-information-q2-2026.pdf",
+      "filingReferenceUrl": "https://www.sec.gov/Archives/edgar/data/0000726728/000072672826000044/o-991q22026.htm",
+      "companyDefinitionNote": "Confirmed directly in the same sentence of the release that states the current-period occupancy figure."
+    }
+  },
+  {
+    "ticker": "O",
+    "metricKey": "propertyCount",
+    "value": 15588,
+    "unavailableReason": null,
+    "currency": "",
+    "unit": "count",
+    "classification": "reported",
+    "period": { "fiscalYear": 2026, "fiscalQuarter": 2, "periodType": "quarterly", "periodStart": "2026-04-01", "periodEnd": "2026-06-30" },
+    "asOf": "2026-06-30",
+    "retrievedAt": "2026-08-11",
+    "freshness": "SNAPSHOT",
+    "provenance": {
+      "source": "Realty Income Corporation — Q2 2026 Earnings Release & Supplemental Information",
+      "sourceType": "company-supplemental",
+      "documentType": "supplemental",
+      "documentUrl": "https://www.realtyincome.com/sites/realty-income/files/2026-08/realty-income-earnings-release-and-supplemental-information-q2-2026.pdf",
+      "filingReferenceUrl": "https://www.sec.gov/Archives/edgar/data/0000726728/000072672826000044/o-991q22026.htm",
+      "companyDefinitionNote": "Confirmed directly in the release: total properties owned or held interests in as of June 30, 2026."
+    }
+  }
+]

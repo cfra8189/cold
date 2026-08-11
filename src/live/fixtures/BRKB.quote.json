@@ -1,0 +1,18 @@
+{
+  "ticker": "BRK.B",
+  "price": null,
+  "previousClose": null,
+  "changePct": null,
+  "currency": "USD",
+  "unit": "USD_per_share",
+  "marketState": null,
+  "asOf": null,
+  "unavailableReason": "provider_not_connected",
+  "freshness": "UNAVAILABLE",
+  "provenance": {
+    "source": "No market-data provider is connected in Phase 1",
+    "sourceType": "market-data-provider",
+    "documentType": null,
+    "documentUrl": null
+  }
+}
