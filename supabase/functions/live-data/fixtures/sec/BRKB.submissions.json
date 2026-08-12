@@ -1,0 +1,22 @@
+{
+  "_fixtureNote": "Trimmed from a real https://data.sec.gov/submissions/CIK0001067983.json response, retrieved 2026-08-12. Only a handful of filings.recent entries are kept: the real latest 10-K/10-Q/8-K plus a couple of decoys.",
+  "cik": "0001067983",
+  "entityType": "operating",
+  "sic": "6331",
+  "sicDescription": "Fire, Marine & Casualty Insurance",
+  "name": "BERKSHIRE HATHAWAY INC",
+  "tickers": ["BRK.A", "BRK.B"],
+  "exchanges": ["NYSE", "NYSE"],
+  "fiscalYearEnd": "1231",
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001193125-26-344495", "0001193125-26-341032", "0001193125-26-330001", "0001193125-26-083899", "0001193125-25-333001"],
+      "filingDate": ["2026-08-11", "2026-08-10", "2026-08-07", "2026-03-02", "2025-08-08"],
+      "reportDate": ["2026-08-08", "2026-06-30", "2026-06-30", "2025-12-31", "2025-06-30"],
+      "form": ["8-K", "10-Q", "SCHEDULE 13G/A", "10-K", "8-K"],
+      "primaryDocument": ["d159922d8k.htm", "brka-20260630.htm", "sc13ga.htm", "brka-20251231.htm", "d900001d8k.htm"],
+      "primaryDocDescription": ["FORM 8-K", "10-Q", "SCHEDULE 13G/A", "10-K", "FORM 8-K"],
+      "isXBRL": [1, 1, 0, 1, 1]
+    }
+  }
+}

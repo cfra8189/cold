@@ -1,0 +1,87 @@
+{
+  "_fixtureNote": "Trimmed from a real https://data.sec.gov/api/xbrl/companyfacts/CIK0000726728.json response, retrieved 2026-08-12. Values are real, but only the concepts this phase's mapping registry uses (plus one non-allowlisted decoy, TreasuryStockValue, and a deliberately stale LongTermDebt series) are kept. Revenues additionally keeps its year-to-date, prior-year, and stale-earlier-accession entries on purpose, to exercise period-selection logic against a real quarter-vs-YTD trap.",
+  "cik": 726728,
+  "entityName": "REALTY INCOME CORPORATION",
+  "facts": {
+    "us-gaap": {
+      "Revenues": {
+        "units": {
+          "USD": [
+            { "start": "2025-04-01", "end": "2025-06-30", "val": 1410378000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2025Q2" },
+            { "start": "2026-01-01", "end": "2026-06-30", "val": 3096438000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 1500000000, "accn": "0000726728-26-000047", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-05" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 1547711000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2" },
+            { "start": "2025-01-01", "end": "2025-12-31", "val": 5749377000, "accn": "0000726728-26-000011", "fy": 2025, "fp": "FY", "form": "10-K", "filed": "2026-02-25", "frame": "CY2025" }
+          ]
+        }
+      },
+      "NetIncomeLossAvailableToCommonStockholdersBasic": {
+        "units": {
+          "USD": [
+            { "start": "2026-01-01", "end": "2026-06-30", "val": 655721000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 343955000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2" }
+          ]
+        }
+      },
+      "Assets": {
+        "units": {
+          "USD": [
+            { "end": "2025-12-31", "val": 72795612000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2025Q4I" },
+            { "end": "2026-06-30", "val": 76441475000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "Liabilities": {
+        "units": {
+          "USD": [
+            { "end": "2026-06-30", "val": 34507398000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "CashAndCashEquivalentsAtCarryingValue": {
+        "units": {
+          "USD": [
+            { "end": "2026-06-30", "val": 552648000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "LongTermDebt": {
+        "units": {
+          "USD": [
+            { "end": "2017-03-31", "val": 4675000000, "accn": "0001104659-17-026354", "fy": 2017, "fp": "Q1", "form": "10-Q", "filed": "2017-04-26", "frame": "CY2017Q1I" }
+          ]
+        }
+      },
+      "EarningsPerShareDiluted": {
+        "units": {
+          "USD/shares": [
+            { "start": "2026-01-01", "end": "2026-06-30", "val": 0.7, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 0.37, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2" }
+          ]
+        }
+      },
+      "CommonStockSharesOutstanding": {
+        "units": {
+          "shares": [
+            { "end": "2026-06-30", "val": 946202000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "DepreciationDepletionAndAmortization": {
+        "units": {
+          "USD": [
+            { "start": "2026-01-01", "end": "2026-06-30", "val": 1274952000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 644677000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2" }
+          ]
+        }
+      },
+      "TreasuryStockValue": {
+        "units": {
+          "USD": [
+            { "end": "2026-06-30", "val": 999000000, "accn": "0000726728-26-000048", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-06", "frame": "CY2026Q2I" }
+          ]
+        }
+      }
+    }
+  }
+}

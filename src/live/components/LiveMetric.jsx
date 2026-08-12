@@ -18,7 +18,7 @@ const CLASSIFICATION_LABEL = {
  *   - metric.value === null    -> "Not available" (or the price-specific copy)
  *   - otherwise                -> value + classification + freshness + source
  */
-export function LiveMetric({ metricKey, label, metric, notApplicableReason, format }) {
+export function LiveMetric({ metricKey, label, metric, notApplicableReason, format, freshnessLabel }) {
   const displayLabel = label || METRIC_LABELS[metricKey] || metricKey;
 
   if (notApplicableReason) {
@@ -52,7 +52,7 @@ export function LiveMetric({ metricKey, label, metric, notApplicableReason, form
     <div>
       <div className="flex items-center justify-between gap-2 mb-1.5">
         <span className="label">{displayLabel}</span>
-        <FreshnessBadge state={metric.freshness} />
+        <FreshnessBadge state={metric.freshness} label={freshnessLabel} />
       </div>
       <div className="mono" style={{ fontSize: 20, letterSpacing: "-0.01em" }}>
         {metric.approximate ? "≈ " : ""}

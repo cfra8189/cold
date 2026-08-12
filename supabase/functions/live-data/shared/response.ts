@@ -4,7 +4,7 @@
    accident from some other code path.
    ========================================================================== */
 
-import type { Action, ErrorCode, Ticker, SuccessEnvelope, ErrorEnvelope } from "./contracts.ts";
+import type { Action, DataMode, ErrorCode, Ticker, SuccessEnvelope, ErrorEnvelope } from "./contracts.ts";
 import { ERROR_STATUS } from "./contracts.ts";
 
 export function jsonResponse(body: unknown, status: number, extraHeaders: HeadersInit = {}): Response {
@@ -13,14 +13,14 @@ export function jsonResponse(body: unknown, status: number, extraHeaders: Header
   return new Response(JSON.stringify(body), { status, headers });
 }
 
-export function successResponse<T>(action: Action, ticker: Ticker, data: T, extraHeaders: HeadersInit = {}): Response {
+export function successResponse<T>(action: Action, ticker: Ticker, data: T, extraHeaders: HeadersInit = {}, dataMode: DataMode = "SNAPSHOT"): Response {
   const envelope: SuccessEnvelope<T> = {
     ok: true,
     action,
     ticker,
     data,
     servedAt: new Date().toISOString(),
-    dataMode: "SNAPSHOT",
+    dataMode,
   };
   return jsonResponse(envelope, 200, extraHeaders);
 }

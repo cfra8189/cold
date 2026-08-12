@@ -1,0 +1,22 @@
+{
+  "_fixtureNote": "Trimmed from a real https://data.sec.gov/submissions/CIK0000726728.json response, retrieved 2026-08-12. Only a handful of filings.recent entries are kept: the real latest 10-K/10-Q/8-K, plus a few decoys (a Form 4, an older 8-K, and a synthetic 10-Q/A) used to test that selection logic doesn't just grab index 0 or get confused by an amendment.",
+  "cik": "0000726728",
+  "entityType": "operating",
+  "sic": "6798",
+  "sicDescription": "Real Estate Investment Trusts",
+  "name": "REALTY INCOME CORP",
+  "tickers": ["O"],
+  "exchanges": ["NYSE"],
+  "fiscalYearEnd": "1231",
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001104659-26-094098", "0000726728-26-000050", "0000726728-26-000048", "0000000000-26-000123", "0000726728-26-000011", "0001104659-25-050001"],
+      "filingDate": ["2026-08-11", "2026-08-09", "2026-08-06", "2026-08-05", "2026-02-25", "2025-11-05"],
+      "reportDate": ["2026-08-11", "2026-06-30", "2026-06-30", "2026-08-04", "2025-12-31", "2025-11-04"],
+      "form": ["8-K", "10-Q/A", "10-Q", "4", "10-K", "8-K"],
+      "primaryDocument": ["tm2622133d1_8k.htm", "o-20260630a.htm", "o-20260630.htm", "xslF345X05/wf-form4.xml", "o-20251231.htm", "tm2530001d1_8k.htm"],
+      "primaryDocDescription": ["FORM 8-K", "10-Q/A", "10-Q", "FORM 4", "10-K", "FORM 8-K"],
+      "isXBRL": [1, 1, 1, 0, 1, 1]
+    }
+  }
+}

@@ -43,9 +43,10 @@ export function LiveCommandCenter({ onSelect }) {
       </Panel>
 
       <div className="grid gap-5" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(320px,1fr))" }}>
-        {(snapshots || LIVE_TICKERS.map((ticker) => ({ ticker, profile: null, quote: null, facts: [] }))).map((s) => {
+        {(snapshots || LIVE_TICKERS.map((ticker) => ({ ticker, profile: null, quote: null, facts: { secReportedGaap: [], companyReportedSnapshot: [] } }))).map((s) => {
           const headlineKey = s.profile ? HEADLINE_METRIC[s.profile.companyType] : null;
-          const headlineFact = headlineKey ? s.facts.find((f) => f.metricKey === headlineKey) : null;
+          // Headline metrics (reported AFFO, operating earnings) are always company-supplemental, never SEC GAAP.
+          const headlineFact = headlineKey ? s.facts.companyReportedSnapshot.find((f) => f.metricKey === headlineKey) : null;
           return (
             <Panel
               key={s.ticker}

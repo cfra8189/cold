@@ -3,8 +3,10 @@
 
    One function, one small action router — not four separately deployed
    functions. The browser only ever talks to this contract; it never calls
-   a market-data provider or SEC EDGAR directly (there is nothing to call
-   yet in Phase 2 anyway — every action is still fixture-backed).
+   a market-data provider or SEC EDGAR directly. As of Phase 3, `facts` and
+   `filings` may reach SEC EDGAR (server-side only, via shared/secClient.ts);
+   `company` and `quote` remain exactly as Phase 2 left them — `quote` still
+   always UNAVAILABLE, since no market-data provider exists yet.
    ========================================================================== */
 
 export const ALLOWED_ACTIONS = ["company", "facts", "quote", "filings"] as const;
@@ -12,6 +14,14 @@ export type Action = (typeof ALLOWED_ACTIONS)[number];
 
 export const ALLOWED_TICKERS = ["O", "BRK.B"] as const;
 export type Ticker = (typeof ALLOWED_TICKERS)[number];
+
+/** Mirrors src/live/schema/company.js's CompanyType — kept in sync manually since this function is self-contained (see README "Fixture synchronization"). */
+export type CompanyType = "equity-reit" | "diversified-holding-company";
+
+export const TICKER_COMPANY_TYPE: Record<Ticker, CompanyType> = {
+  O: "equity-reit",
+  "BRK.B": "diversified-holding-company",
+};
 
 export function isAllowedAction(value: unknown): value is Action {
   return typeof value === "string" && (ALLOWED_ACTIONS as readonly string[]).includes(value);
@@ -26,8 +36,63 @@ export interface LiveDataRequestBody {
   ticker: Ticker;
 }
 
-/** Every successful response carries dataMode: "SNAPSHOT" — Phase 2 has no live pipeline. */
-export type DataMode = "SNAPSHOT";
+/**
+ * Freshness of a single value. LIVE means "successfully retrieved from the
+ * current SEC endpoint during this request" — it is a filing-data concept,
+ * not a market-real-time one; the UI prefers the label "CURRENT SEC FILING
+ * DATA" over a bare "LIVE" badge specifically to avoid that confusion.
+ */
+export const FRESHNESS_STATES = ["SAMPLE", "SNAPSHOT", "LIVE", "STALE", "UNAVAILABLE"] as const;
+export type FreshnessState = (typeof FRESHNESS_STATES)[number];
+
+/**
+ * Envelope-level summary of a response's freshest constituent value.
+ * `company`/`quote` are always "SNAPSHOT" (unchanged from Phase 2). `facts`
+ * and `filings` compute this from their SEC portion: "LIVE" when freshly
+ * fetched this request, "STALE" when served from an expired last-known-good
+ * cache after a SEC failure, "SNAPSHOT" when only fixture/company-reported
+ * data is present (SEC not configured or not attempted).
+ */
+export type DataMode = "SNAPSHOT" | "LIVE" | "STALE";
+
+/** Mirrors src/live/schema/metric.js's NormalizedFinancialMetric, plus optional SEC-specific provenance fields (secConcept/secUnit/accessionNumber/filedDate/secFrame) used only when sourceType is "sec-filing". */
+export interface NormalizedFinancialMetric {
+  ticker: Ticker;
+  metricKey: string;
+  value: number | null;
+  unavailableReason: string | null;
+  currency: string;
+  unit: string;
+  classification: "reported" | "calculated" | "estimated" | "manual";
+  period: {
+    fiscalYear: number;
+    fiscalQuarter: number | null;
+    periodType: "annual" | "quarterly" | "ttm";
+    periodStart: string;
+    periodEnd: string;
+  };
+  asOf: string | null;
+  retrievedAt?: string;
+  calculatedAt?: string;
+  reviewedAt?: string;
+  reviewedBy?: string;
+  derivedFrom?: string[];
+  calculationInputs?: Record<string, unknown>;
+  freshness: FreshnessState;
+  provenance: {
+    source: string;
+    sourceType: "sec-filing" | "market-data-provider" | "company-supplemental" | "manual-entry" | "internal-calculation";
+    documentType?: string | null;
+    documentUrl?: string | null;
+    filingReferenceUrl?: string;
+    companyDefinitionNote?: string;
+    secConcept?: string;
+    secUnit?: string;
+    accessionNumber?: string;
+    filedDate?: string;
+    secFrame?: string;
+  };
+}
 
 export interface SuccessEnvelope<T = unknown> {
   ok: true;

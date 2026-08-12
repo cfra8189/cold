@@ -125,6 +125,15 @@ export const METRIC_LABELS = Object.freeze({
   netEarningsPerClassBShare: "Net earnings per Class B share",
   netEarningsPerClassBShareGrowth: "Net earnings per share growth (YoY)",
   insuranceFloat: "Insurance float",
+  secRevenue: "Revenue (SEC-reported)",
+  secNetIncome: "Net income attributable to shareholders (SEC-reported)",
+  secTotalAssets: "Total assets (SEC-reported)",
+  secTotalLiabilities: "Total liabilities (SEC-reported)",
+  secCashAndCashEquivalents: "Cash and cash equivalents (SEC-reported)",
+  secLongTermDebt: "Long-term debt (SEC-reported)",
+  secDilutedEPS: "Diluted earnings per share (SEC-reported)",
+  secSharesOutstanding: "Shares outstanding (SEC-reported)",
+  secRealEstateDepreciationAndAmortization: "Real estate depreciation & amortization (SEC-reported)",
 });
 
 /**

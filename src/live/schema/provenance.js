@@ -18,6 +18,12 @@
  *                                            guaranteed to have been fetch-verified the way documentUrl was.
  * @property {string} [companyDefinitionNote] required for company-defined non-GAAP measures (e.g. reported AFFO):
  *                                             a short paraphrase of how the company itself defines/reconciles the figure
+ * @property {string} [secConcept]           the exact us-gaap XBRL concept name a SEC-sourced value was read from
+ *                                            (e.g. "Revenues") — preserved so the mapping is auditable, never hidden
+ * @property {string} [secUnit]              the exact SEC unit the concept was tagged with (e.g. "USD", "USD/shares")
+ * @property {string} [accessionNumber]      the SEC accession number the value was tied to
+ * @property {string} [filedDate]            the date SEC received the filing that value came from
+ * @property {string} [secFrame]             the SEC XBRL "frame" identifier (e.g. "CY2026Q2"), when present
  */
 
 export const SOURCE_TYPES = Object.freeze([

@@ -1,0 +1,61 @@
+{
+  "_fixtureNote": "Trimmed from a real https://data.sec.gov/api/xbrl/companyfacts/CIK0001067983.json response, retrieved 2026-08-12. Kept: the mapped concepts' current-quarter values, ProfitLoss as a decoy (present but never an allowlisted candidate for netIncome — NetIncomeLoss is preferred since it excludes noncontrolling interests), and EarningsPerShareBasic showing why diluted EPS is marked unavailable for Berkshire (the concept is last used in a 2014 filing, not the current quarter). CommonStockSharesOutstanding and CashAndCashEquivalentsAtCarryingValue are genuinely absent from Berkshire's current filings, matching the real payload.",
+  "cik": 1067983,
+  "entityName": "BERKSHIRE HATHAWAY INC",
+  "facts": {
+    "us-gaap": {
+      "Revenues": {
+        "units": {
+          "USD": [
+            { "start": "2025-04-01", "end": "2025-06-30", "val": 92515000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2025Q2" },
+            { "start": "2026-01-01", "end": "2026-06-30", "val": 195483000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 101808000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2026Q2" }
+          ]
+        }
+      },
+      "NetIncomeLoss": {
+        "units": {
+          "USD": [
+            { "start": "2026-01-01", "end": "2026-06-30", "val": 35773000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10" },
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 25667000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2026Q2" }
+          ]
+        }
+      },
+      "ProfitLoss": {
+        "units": {
+          "USD": [
+            { "start": "2026-04-01", "end": "2026-06-30", "val": 25772000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2026Q2" }
+          ]
+        }
+      },
+      "Assets": {
+        "units": {
+          "USD": [
+            { "end": "2026-06-30", "val": 1263071000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "Liabilities": {
+        "units": {
+          "USD": [
+            { "end": "2026-06-30", "val": 512894000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents": {
+        "units": {
+          "USD": [
+            { "end": "2026-06-30", "val": 41360000000, "accn": "0001193125-26-341032", "fy": 2026, "fp": "Q2", "form": "10-Q", "filed": "2026-08-10", "frame": "CY2026Q2I" }
+          ]
+        }
+      },
+      "EarningsPerShareBasic": {
+        "units": {
+          "USD/shares": [
+            { "start": "2013-10-01", "end": "2013-12-31", "val": 3035, "accn": "0001193125-14-078778", "fy": 2013, "fp": "FY", "form": "10-K", "filed": "2014-03-03", "frame": "CY2013Q4" }
+          ]
+        }
+      }
+    }
+  }
+}

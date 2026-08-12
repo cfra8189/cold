@@ -56,23 +56,29 @@ test("BRK.B company response matches the approved profile shape", async () => {
   assert.equal(data.cik, "0001067983");
 });
 
-test("O facts response contains only reported facts, no calculated metrics", async () => {
+test("O facts response separates secReportedGaap from companyReportedSnapshot, and neither ever contains a calculated metric", async () => {
   const res = await handleRequest(req({ action: "facts", ticker: "O" }), freshDeps());
   const { data } = await res.json();
-  assert.ok(Array.isArray(data));
-  assert.ok(data.length > 0);
-  for (const fact of data) {
+  assert.ok(Array.isArray(data.secReportedGaap));
+  assert.ok(Array.isArray(data.companyReportedSnapshot));
+  assert.ok(data.companyReportedSnapshot.length > 0);
+  for (const fact of [...data.secReportedGaap, ...data.companyReportedSnapshot]) {
     assert.equal(fact.classification, "reported", `${fact.metricKey} must be reported, not computed server-side`);
+  }
+  for (const fact of data.companyReportedSnapshot) {
     assert.equal(fact.freshness, "SNAPSHOT");
   }
-  assert.ok(data.some((f: { metricKey: string }) => f.metricKey === "reportedAffoPerShare"));
-  assert.ok(!data.some((f: { metricKey: string }) => f.metricKey === "affoPayoutRatio"), "calculated payout ratio must not be served by the backend");
+  assert.ok(data.companyReportedSnapshot.some((f: { metricKey: string }) => f.metricKey === "reportedAffoPerShare"));
+  const allKeys = [...data.secReportedGaap, ...data.companyReportedSnapshot].map((f: { metricKey: string }) => f.metricKey);
+  assert.ok(!allKeys.includes("affoPayoutRatio"), "calculated payout ratio must not be served by the backend");
 });
 
-test("BRK.B facts response contains only reported facts, no calculated metrics", async () => {
+test("BRK.B facts response separates secReportedGaap from companyReportedSnapshot", async () => {
   const res = await handleRequest(req({ action: "facts", ticker: "BRK.B" }), freshDeps());
   const { data } = await res.json();
-  for (const fact of data) {
+  assert.ok(Array.isArray(data.secReportedGaap));
+  assert.ok(Array.isArray(data.companyReportedSnapshot));
+  for (const fact of data.companyReportedSnapshot) {
     assert.equal(fact.classification, "reported");
     assert.equal(fact.freshness, "SNAPSHOT");
   }
