@@ -1,0 +1,12 @@
+# Minimal Supabase project config for Phase 2 of COLD LIVE.
+#
+# This declares the local function boundary only. No remote project has
+# been created or linked, no database migrations exist, and no auth is
+# configured — Phase 2 is a fixture-backed contract, not a live deployment.
+project_id = "cold-app"
+
+[functions.live-data]
+# No end-user authentication in this phase (see live-data/README.md,
+# "Security controls" — abuse-resistance comes from validation, the ticker
+# allowlist, and rate limiting instead of a JWT requirement).
+verify_jwt = false
